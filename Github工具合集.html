@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        Hexo
+    </title>
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <h3 id="一些工具可能是专门为红队设计的，而其他工具则更通用，可以适应红队环境。"><a href="#一些工具可能是专门为红队设计的，而其他工具则更通用，可以适应红队环境。" class="headerlink" title="一些工具可能是专门为红队设计的，而其他工具则更通用，可以适应红队环境。"></a>一些工具可能是专门为红队设计的，而其他工具则更通用，可以适应红队环境。</h3><p>警告：此存储库中的材料仅供参考和教育目的。它们不打算用于任何非法活动。</p>
+<h3 id="什么是ATT-CK框架"><a href="#什么是ATT-CK框架" class="headerlink" title="什么是ATT&amp;CK框架"></a>什么是ATT&amp;CK框架</h3><blockquote>
+<p>  ATT&amp;CK是一个基于真实观察的数据创建的、全球免费公开可访问的、基于社区驱动发展的，为蓝方和红方提供一种沟通交流的通用语言的对抗行为知识库，整个框架围绕战术和实现战术的具体技术进行描述和举例。</p>
+</blockquote>
+<ul>
+<li><p>信息搜集&#x2F;侦察-Reconnaissance<br>侦察指的是重点关注试图收集信息以计划在未来进行攻击的攻击者，包括主动或被动收集信息以确定攻击目标的技术。以下是在侦察活动中可以使用到的一些工具：</p>
+</li>
+<li><p>crt.sh→httprobe→目击者自动域截图<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#crtsh---httprobe---eyewitness">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#crtsh---httprobe---eyewitness</a></p>
+</li>
+<li><p>jsendpoints-提取页面中的DOM链接<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#jsendpoints">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#jsendpoints</a></p>
+</li>
+<li><p>nuclei-漏洞扫描工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#nuclei">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#nuclei</a></p>
+</li>
+</ul>
+<ul>
+<li>certSniff-证书透明日志关键字嗅探器<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#certsniff">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#certsniff</a></li>
+</ul>
+<ul>
+<li><p>gobuster-路径扫描工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#gobuster">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#gobuster</a></p>
+</li>
+<li><p>dnsrecon-DNS枚举工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#dnsrecon">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#dnsrecon</a></p>
+</li>
+</ul>
+<ul>
+<li><p>Shodan-网络测绘工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#shodanio">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#shodanio</a></p>
+</li>
+<li><p>AORT (All in One Recon Tool)-子域名扫描工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#aort">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#aort</a></p>
+</li>
+<li><p>spoofcheck-SPF&#x2F;DMARC记录检查器<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#spoofcheck">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#spoofcheck</a></p>
+</li>
+<li><p>AWSBucketDump-子域名扫描工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#awsbucketdump">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#awsbucketdump</a></p>
+</li>
+</ul>
+<ul>
+<li><p>GitHarvester-GitHub凭据搜索器<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#githarvester">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#githarvester</a></p>
+</li>
+<li><p>truffleHog-GitHub证书扫描器<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#trufflehog">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#trufflehog</a></p>
+</li>
+<li><p>Dismap-企业资产扫描工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#dismap">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#dismap</a></p>
+</li>
+<li><p>enum4linux-Windows &#x2F; samba枚举工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#enum4linux">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#enum4linux</a></p>
+</li>
+<li><p>skanuvaty——dns&#x2F;网络&#x2F;端口扫描器<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#skanuvaty">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#skanuvaty</a></p>
+</li>
+<li><p>Metabigor-通过API进行开源情报搜集的工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#metabigor">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#metabigor</a></p>
+</li>
+<li><p>Gitrob-github敏感信息扫描器<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#gitrob">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#gitrob</a></p>
+</li>
+</ul>
+<h2 id="武器化-资源开发-Resource-Development"><a href="#武器化-资源开发-Resource-Development" class="headerlink" title="武器化&#x2F;资源开发-Resource Development"></a>武器化&#x2F;资源开发-Resource Development</h2><blockquote>
+<p>  资源开发指的是，重点关注试图获取资源以进行攻击的攻击者，包括攻击者为实现目标而获取、购买或破坏&#x2F;窃取资源的技术。</p>
+</blockquote>
+<ul>
+<li><p>Chimera-Powershell混淆脚本（Bypass）<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#chimera">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#chimera</a></p>
+</li>
+<li><p>msfvenom-载荷生成工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#msfvenom">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#msfvenom</a></p>
+</li>
+<li><p>WSH-功能强大的Web Shell生成器和命令行接口工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#wsh">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#wsh</a></p>
+</li>
+<li><p>HTA-HTA Payload生成工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#hta">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#hta</a></p>
+</li>
+<li><p>VBA-VBA Payload生成工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#vba">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#vba</a></p>
+</li>
+<li><p>初始访问-Initial Access<br>Bash的兔子（USB攻击工具）<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#bash-bunny">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#bash-bunny</a></p>
+</li>
+<li><p>邪恶的网络钓鱼活动框架<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#evilgophish">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#evilgophish</a></p>
+</li>
+<li><p>社会工程人员工具集钓鱼活动框架<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#social-engineer-toolkit-set">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#social-engineer-toolkit-set</a></p>
+</li>
+<li><p>九头蛇暴力破解工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#hydra">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#hydra</a></p>
+</li>
+<li><p>SquarePhish OAuth&#x2F;QR code钓鱼框架<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#squarephish">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#squarephish</a></p>
+</li>
+<li><p>King Phisher网络钓鱼活动框架<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#king-phisher">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#king-phisher</a></p>
+</li>
+<li><p>执行-Execution<br>Responder-针对LLMNR和NBT-NS协议进行投毒的工具<br><a target="_blank" rel="noopener" href="https://github.com/SpiderLabs/Responder#usage">https://github.com/SpiderLabs/Responder#usage</a></p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/SpiderLabs/Responder#usage">https://github.com/SpiderLabs/Responder#usage</a></p>
+</li>
+</ul>
+<p>​	cd Responder</p>
+<ul>
+<li>secretsdump-从 Windows 系统中提取密码哈希的工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#secretsdump">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#secretsdump</a></li>
+</ul>
+<p>​	python3 -m pip install impacket</p>
+<ul>
+<li>evil-winrm-为 Windows 远程管理提供命令行界面的工具<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#evil-winrm">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#evil-winrm</a></li>
+</ul>
+<p>​	Evil-WinRM 允许攻击者使用 WinRM 远程连接到 Windows 机器并执行任意命令。</p>
+<p>​	一些功能包括：</p>
+<p>​	在内存中加载 Powershell 脚本</p>
+<p>​	绕过某些 AV 加载内存 dll 文件</p>
+<p>​	加载 x64 负载</p>
+<p>​	传递哈希支持</p>
+<p>​	上传和下载本地和远程文件</p>
+<ul>
+<li>Donut -用于在内存中执行 VBScript、JScript、EXE、DLL 文件和 dotNET 程序集的工具。<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#evil-winrm">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#evil-winrm</a></li>
+</ul>
+<p>​	pip3 install donut-shellcode</p>
+<ul>
+<li>Macro_pack-用于自动混淆和生成 Office 文档、VB 脚本、快捷方式和其他红队格式的工具。<br>git clone <a target="_blank" rel="noopener" href="https://github.com/sevagas/macro_pack.git">https://github.com/sevagas/macro_pack.git</a></li>
+</ul>
+<p>​	cd macro_pack</p>
+<p>​	pip3 install -r requirements.txt</p>
+<ul>
+<li><p>PowerSploit-PowerShell 脚本和模块的集合，可用于实现各种红队目标。<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#powersploit">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#powersploit</a></p>
+</li>
+<li><p>Rubeus-一种可用于执行与 Microsoft Active Directory (AD) 环境相关的各种操作的工具，例如转储密码哈希、创建&#x2F;删除用户和修改用户属性。<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#rubeus">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#rubeus</a></p>
+</li>
+<li><p>SharpUp -一个很好的工具，用于检查受害者端点是否存在与高完整性进程、组、可劫持路径等相关的漏洞。<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#sharpup">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#sharpup</a></p>
+</li>
+<li><p>SQLRecon-此 C# MS-SQL 工具包专为攻击性侦察和后期开发而设计。<br><a target="_blank" rel="noopener" href="https://github.com/skahwah/SQLRecon/wiki">https://github.com/skahwah/SQLRecon/wiki</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#sqlrecon">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#sqlrecon</a></p>
+</li>
+</ul>
+<p>​	持久化-Persistence<br>​	Impacket<br>​	Impacket为各种网络协议(包括SMB、Kerberos和LDAP)提供了一组低级Python绑定，以及用于与网络服务交互和执行特定任务(如转储密码散列值和创建网络共享)的高级库。</p>
+<p>​	它还包括许多命令行工具，可用于执行各种任务，如转储SAM数据库、枚举域信任，以及破解Windows密码。</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/fortra/impacket">https://github.com/fortra/impacket</a></p>
+</li>
+<li><p>Empire<br>Empire是一个漏洞攻击后的框架，允许你生成有效载荷，以便与受害者系统建立远程连接。</p>
+</li>
+</ul>
+<p>​	一旦有效载荷在受害者系统上执行，它就会建立回帝国服务器的连接，然后可以使用该连接发出命令并控制目标系统。</p>
+<p>​	Empire还包含许多内置模块和脚本，可用于执行特定的任务，如转储密码散列值、访问Windows注册表和窃取数据。</p>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/EmpireProject/Empire">https://github.com/EmpireProject/Empire</a></p>
+<ul>
+<li><p>SharPersist<br>一个用c#编写的Windows持久性工具包。<a target="_blank" rel="noopener" href="https://github.com/mandiant/SharPersist/wiki">https://github.com/mandiant/SharPersist/wiki</a> <a target="_blank" rel="noopener" href="https://github.com/mandiant/SharPersist">https://github.com/mandiant/SharPersist</a></p>
+</li>
+<li><p>权限提升-Privilege Escalation<br>LinPEAS<br>LinPEAS是一个很好的、冗长的权限提升工具，用于在Linux端点上查找本地privesc路由。</p>
+</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS">https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS</a></p>
+<ul>
+<li>WinPEAS<br>WinPEAS是一个很好的、冗长的权限提升工具，用于在Windows端点上查找本地privesc路由。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS">https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS</a></p>
+<ul>
+<li>linux-smart-enumeration<br>Linux smart enumeration是另一个很好的、不那么冗长的Linux privesc工具。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/diego-treitos/linux-smart-enumeration">https://github.com/diego-treitos/linux-smart-enumeration</a></p>
+<ul>
+<li>Certify<br>certification是一个c#工具，用于枚举和滥用Active Directory证书服务(AD CS)中的错误配置。</li>
+</ul>
+<p>​	certification旨在与其他红队工具和技术(如Mimikatz和PowerShell)结合使用，使红队能够执行各种类型的攻击，包括中间人攻击、模仿攻击和特权升级攻击。</p>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/GhostPack/Certify">https://github.com/GhostPack/Certify</a></p>
+<ul>
+<li>Get-GPPPassword<br>Get-GPPPassword是powersplit工具包的一个PowerShell脚本，用于检索使用组策略首选项(GPP)创建和管理的本地帐户的密码。</li>
+</ul>
+<p>​	Get-GPPPassword通过在域控制器上的SYSVOL文件夹中搜索包含密码信息的任何GPP文件来工作。一旦找到这些文件，它就解密密码信息并将其显示给用户。</p>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Get-GPPPassword.ps1">https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Get-GPPPassword.ps1</a></p>
+<ul>
+<li>Sherlock<br>PowerShell脚本用于快速查找本地权限升级漏洞缺失的软件补丁。</li>
+</ul>
+<p>​	MS10-015:用户模式到振铃(KiTrap0D) —MS10-092:任务调度程序 —MS13-053: NTUserMessageCall Win32k内核池溢出</p>
+<p>• MS13-081: TrackPopupMenuEx Win32k NULL Page</p>
+<p>• MS14-058: TrackPopupMenu Win32k空指针解引用 —MS15-051: ClientCopyImage Win32k</p>
+<p>• MS15-078:字体驱动缓冲区溢出 MS16-016: ‘mrxdav。sys的WebDAV</p>
+<p>• MS16-032:辅助登录手柄</p>
+<p>• MS16-034: Windows内核模式驱动程序EoP</p>
+<p>• MS16-135: Win32k特权提升 —CVE-2017-7199: Nessus Agent 6.6.2—6.10.3 Priv Esc</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/rasta-mouse/Sherlock">https://github.com/rasta-mouse/Sherlock</a></p>
+<ul>
+<li>Watson<br>Watson是一个.net工具，旨在枚举缺失的kb，并建议利用特权升级漏洞。</li>
+</ul>
+<p>​	非常适合识别缺失的补丁，并建议可以用来利用已知漏洞以获得系统上更高权限的漏洞。</p>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/rasta-mouse/Watson">https://github.com/rasta-mouse/Watson</a></p>
+<ul>
+<li>ImpulsiveDLLHijack<br>一个基于c#的工具，可以自动发现和利用目标二进制文件中的DLL劫持。</li>
+</ul>
+<p>​	在交战期间，发现的被劫持路径可以被武器化，以逃避EDR。</p>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/knight0x07/ImpulsiveDLLHijack">https://github.com/knight0x07/ImpulsiveDLLHijack</a></p>
+<ul>
+<li>ADFSDump<br>一个c#工具，从AD FS转储各种各样的好东西。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/mandiant/ADFSDump">https://github.com/mandiant/ADFSDump</a></p>
+<ul>
+<li>防御规避-Defense Evasion<br>Invoke-Obfuscation<br>一个兼容PowerShell v2.0+的PowerShell命令和脚本混淆器。如果受害端点能够执行PowerShell，那么这个工具非常适合创建严重混淆的脚本。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/danielbohannon/Invoke-Obfuscation">https://github.com/danielbohannon/Invoke-Obfuscation</a></p>
+<ul>
+<li>Veil<br>Veil是一种工具，用于生成绕过常见反病毒解决方案的元ploit有效负载。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/Veil-Framework/Veil">https://github.com/Veil-Framework/Veil</a></p>
+<ul>
+<li>SharpBlock<br>一种通过阻止入口点执行来绕过EDR的活动投影DLL的方法。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/CCob/SharpBlock">https://github.com/CCob/SharpBlock</a></p>
+<ul>
+<li>Alcatraz<br>Alcatraz是一个GUI x64二进制混淆器，能够混淆各种不同的pe文件，包括:</li>
+</ul>
+<p>​	• .exe</p>
+<p>​	• .dll</p>
+<p>​	• .sys <a target="_blank" rel="noopener" href="https://github.com/weak1337/Alcatraz">https://github.com/weak1337/Alcatraz</a></p>
+<ul>
+<li>横向移动-Lateral Movement<br>crackmapexec<br>这是在Windows&#x2F;Active Directory环境中使用凭据对(用户名:密码，用户名:散列)进行旋转的一个很好的工具。它还提供了其他功能，包括枚举登录用户和爬行SMB共享以执行psexec风格的攻击，使用Powershell自动将Mimikatz&#x2F;Shellcode&#x2F;DLL注入内存，转储NTDS。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/Porchetta-Industries/CrackMapExec">https://github.com/Porchetta-Industries/CrackMapExec</a></p>
+<ul>
+<li>WMIOps<br>WMIOps是一个powershell脚本，它使用WMI在Windows环境中的本地或远程主机上执行各种操作。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/FortyNorthSecurity/WMIOps">https://github.com/FortyNorthSecurity/WMIOps</a></p>
+<ul>
+<li>PowerLessShell<br>使用MSBuild.exe远程执行PowerShell脚本和命令而不生成PowerShell .exe的工具。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/Mr-Un1k0d3r/PowerLessShell">https://github.com/Mr-Un1k0d3r/PowerLessShell</a></p>
+<ul>
+<li>PsExec<br>PsExec是Sysinternals工具套件的一部分，Sysinternals是一组用于管理和排除Windows系统故障的实用程序。</li>
+</ul>
+<p>​	它非常适合在目标计算机上远程执行命令。</p>
+<p>​	<a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/sysinternals/downloads/psexec">https://learn.microsoft.com/en-us/sysinternals/downloads/psexec</a></p>
+<ul>
+<li>LiquidSnake<br>Liquid Snake是一款旨在对Windows系统进行横向移动而不接触磁盘的程序。</li>
+</ul>
+<p>​	为了在内存中执行. net程序集，该工具依赖于WMI事件订阅，. net程序集将侦听命名管道上的shellcode，然后使用线程劫持shellcode注入的变体来执行它。</p>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/RiccardoAncarani/LiquidSnake">https://github.com/RiccardoAncarani/LiquidSnake</a></p>
+<ul>
+<li>Enabling RDP-Windows RDP enable command<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#enabling-rdp">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#enabling-rdp</a><br>Upgrading shell to meterpreter<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#upgrading-shell-to-meterpreter">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#upgrading-shell-to-meterpreter</a><br>Forwarding Ports<br>有时，在获得对端点的访问权后，会有本地端口。使这些内部端口可对外路由有助于横向移动到主机上的其他服务。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#forwarding-ports">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#forwarding-ports</a></p>
+<ul>
+<li><p>Jenkins reverse shell<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#jenkins-reverse-shell">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#jenkins-reverse-shell</a><br>ADFSpoof<br>adfspooof有两个主要功能:</p>
+<ol>
+<li><p>给定来自AD FS配置数据库的EncryptedPFX blob和来自Active Directory的DKM解密密钥，生成用于令牌签名的可用密钥&#x2F;证书对。</p>
+</li>
+<li><p>给定一个签名密钥，生成一个可用于访问联邦应用程序的签名安全令牌。</p>
+</li>
+</ol>
+</li>
+<li><p>此工具旨在与ADFSDump结合使用。ADFSDump运行在ADFS服务器上，输出您需要使用adfspooof的重要信息。</p>
+</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/mandiant/ADFSpoof">https://github.com/mandiant/ADFSpoof</a></p>
+<ul>
+<li>kerbrute<br>一个通过Kerberos预身份验证快速强制枚举有效Active Directory帐户的工具。</li>
+</ul>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/ropnop/kerbrute">https://github.com/ropnop/kerbrute</a></p>
+<ul>
+<li><p>其他红队工具<br>隐藏本地管理员帐号<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#hiding-the-local-admin-account">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#hiding-the-local-admin-account</a></p>
+</li>
+<li><p>通过删除签名来削弱windows defender<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#cripple-windows-defender-by-deleting-signatures">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#cripple-windows-defender-by-deleting-signatures</a></p>
+</li>
+<li><p>为每个用户启用多个RDP会话<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#enable-multiple-rdp-sessions-per-user">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#enable-multiple-rdp-sessions-per-user</a></p>
+</li>
+<li><p>Sysinternals PsExec.exe本地替代方案<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#sysinternals-psexecexe-local-alternative">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#sysinternals-psexecexe-local-alternative</a></p>
+</li>
+<li><p>靠陆地端口扫描器生活<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#live-off-the-land-port-scanner">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#live-off-the-land-port-scanner</a></p>
+</li>
+<li><p>代理感知的PowerShell下载字符串<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#proxy-aware-powershell-downloadstring">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#proxy-aware-powershell-downloadstring</a></p>
+</li>
+<li><p>在浏览器书签中查找内部端点<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#looking-for-internal-endpoints-in-browser-bookmarks">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#looking-for-internal-endpoints-in-browser-bookmarks</a></p>
+</li>
+<li><p>查询DNS记录进行枚举<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#query-dns-records-for-enumeration">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#query-dns-records-for-enumeration</a></p>
+</li>
+<li><p>没有PowerUp的未引用的服务路径<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#unquoted-service-paths-without-powerup">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#unquoted-service-paths-without-powerup</a></p>
+</li>
+<li><p>使用&#x2F;k绕过禁用的命令提示符<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#bypass-a-disabled-command-prompt-with-k">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#bypass-a-disabled-command-prompt-with-k</a></p>
+</li>
+<li><p>停止windows防御程序删除mimikatz.exe<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#stop-windows-defender-deleting-mimikatzexe">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#stop-windows-defender-deleting-mimikatzexe</a></p>
+</li>
+<li><p>检查您是否在虚拟机中<br><a target="_blank" rel="noopener" href="https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#check-if-you-are-in-a-virtual-machine">https://github.com/A-poc/RedTeam-Tools/blob/main/README.md#check-if-you-are-in-a-virtual-machine</a></p>
+</li>
+</ul>
+
+    </div>
+
+    
+</div>
+    <div class="footer" id="footer">
+    <p>Copyright © 2020 <a class="flink" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>-<a class="flink" target="_blank" rel="noopener" href="https://github.com/sanjinhub/hexo-theme-geek">Geek</a>.
+        <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
+            <input type="checkbox" name="switch" id="update_style">
+            <span class="el-switch-style"></span>
+        </label>
+<!--         <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script> -->
+    </p>
+</div>
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="CmCti21ooOOIzFOhEyFkFvR0-gzGzoHsz">
+<input type="hidden" id="valine_appKey" value="FqiyUqbg7McKN2eG0MCewupf">
+
+<script src="/libs/jquery.min.js"></script>
+
+
+<script src="/libs/highlight/highlight.pack.js"></script>
+
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
+
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
+
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
+
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
+
+.v a {
+    color: #8696b1;
+}
+
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
+</body>
+
+</html>
