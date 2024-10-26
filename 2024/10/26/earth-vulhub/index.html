@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        Hexo
+    </title>
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <h1 id="Earth-–-VlunHub"><a href="#Earth-–-VlunHub" class="headerlink" title="Earth – VlunHub"></a>Earth – VlunHub</h1><blockquote>
+<p>下载靶机:<a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/the-planets-earth,755/">https://www.vulnhub.com/entry/the-planets-earth,755/</a></p>
+</blockquote>
+<ul>
+<li>导入虚拟机并设置好网络</li>
+<li>开启盒子以及渗透虚拟机–&gt;确保两台主机在同一个网络</li>
+</ul>
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集:"></a>信息收集:</h2><ul>
+<li><p>网络信息扫描</p>
+<ul>
+<li><p>端口扫描 – 已知当前网段为:172.16.148.*</p>
+</li>
+<li><blockquote>
+<p>nmap -sS -sV -sC -O -v -T 5 172.16.148.1&#x2F;24</p>
+<p>参数说明: -sS 进行tcp syn扫描</p>
+<p>-sV 根据服务指纹识别出相应的版本</p>
+<p>-sC 根据端口识别服务,调用默认脚本</p>
+<p>-O 检测操作系统</p>
+<p>-v 显示扫描细节</p>
+<p>-T 扫描强度(0-5) 级别越高扫描越快</p>
+</blockquote>
+<blockquote>
+<p>或者使用 netdiscover -i eth0   监听当前网络流量</p>
+<p>参数说明: -i 指定网卡进行监听</p>
+<p><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414204745265.png" alt="image-20220414204745265"></p>
+</blockquote>
+</li>
+<li><p>访问ssh,80以及443端口后均无果</p>
+</li>
+<li><p>将找到的dns记录映射到本地进行访问</p>
+</li>
+<li><blockquote>
+<p>sudo echo “172.16.148.128 earth.local terratest.earth.local” &gt;&gt; &#x2F;etc&#x2F;hosts </p>
+<p><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414205505143.png" alt="image-20220414205505143"></p>
+</blockquote>
+</li>
+<li><p>尝试输入一些内容,此时得到的结果都是经过加密的,没有相应算法无法进行解密</p>
+</li>
+</ul>
+</li>
+<li><p>信息收集:目录扫描</p>
+<ul>
+<li><p>使用dirsear进行扫描</p>
+<blockquote>
+<p>dirsearch -u earth.local</p>
+<p><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414205805150.png" alt="image-20220414205805150"></p>
+</blockquote>
+</li>
+<li><p>尝试访问</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414210005120.png" alt="image-20220414210005120"></p>
+</li>
+<li><p>继续扫描当前网站,查看是否有其他的未知文件或目录</p>
+</li>
+<li><blockquote>
+<p>gobuster dir -e -u earth.local -w &#x2F;usr&#x2F;share&#x2F;wordlists&#x2F;dirb&#x2F;common.txt</p>
+<p>参数说明:</p>
+<p>dir 扫描目录或文件</p>
+<p>-e 显示完整路径</p>
+<p>-u 指定扫描的网址</p>
+<p>-w 指定字典或字符串位置</p>
+<p><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414212315022.png" alt="image-20220414212315022"></p>
+<p>不能说是一无所获,只能说是毛都没有</p>
+</blockquote>
+</li>
+<li><p>扫描https网址: &gt; <a target="_blank" rel="noopener" href="https://terratest.earth.local/">https://terratest.earth.local</a> 此处如果未加https则会重定向到earth.local</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414212931593.png" alt="image-20220414212931593"></p>
+</li>
+<li><p>发现robots.txt文件,打开看看…</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414213459622.png" alt="image-20220414213459622"></p>
+</li>
+<li><p>此处有一项内容不允许抓取,连续测试文件后缀名,排除已在列表之上的所有扩展名.(直接试txt)</p>
+</li>
+<li><p>信息收集:查看文件</p>
+</li>
+<li><blockquote>
+<p>curl <a target="_blank" rel="noopener" href="https://terratest.earth.local/testingnotes.txt">https://terratest.earth.local/testingnotes.txt</a> -k  获取文件—当然也可以在浏览器中打开</p>
+<p>参数说明:</p>
+<p>-k 允许连接到 SSL 站点，而不使用证书</p>
+<p><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414214153186.png" alt="image-20220414214153186"></p>
+</blockquote>
+</li>
+<li><p>书接上文,此时已经看到当前的加密方式为XOR,且已经得到了用户名,密钥的解密方式可能会存在于<code>testdata.txt</code>中尝试将页面中的字符串进行解密</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414215438804.png" alt="image-20220414215438804"></p>
+</li>
+</ul>
+</li>
+<li><p>使用cyberchef将数据进行解密,首先需要将字符串转换为16进制,在进行xor解密</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414221146463.png" alt="image-20220414221146463"></li>
+<li>尝试登陆:</li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220414221322145.png" alt="image-20220414221322145"></li>
+<li>使用shell进行连接—-被禁止远程连接. </li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415112323869.png" alt="image-20220415112323869"></li>
+<li>此时我们可以通过将反弹shell进行编码来进行绕过,此处使用base64编码,当然使用其他编码也是可以的.</li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415113450920.png" alt="image-20220415113450920"></li>
+<li>将已准备好的命令进行base64编码后重定向到bash,使用<code>-e</code>参数来指定重定向的shell</li>
+</ul>
+</li>
+<li><p>权限提升</p>
+<ul>
+<li>当前这个权限肯定是啥也干不了的~</li>
+<li>使用查找命令找到当前可执行的二进制文件<code>find / -perm -u=s 2&gt;/dev/null</code><ul>
+<li>参数说明:</li>
+<li>find 查找命令</li>
+<li>-perm mode     文件的权限正好是mode就匹配<br>-perm -mode    文件的权限包括mode就匹配（该文件还可以拥有额外的权限属性）</li>
+<li>-u&#x3D;s  当前用户可执行的suid的脚本或文件</li>
+<li>2为过滤输出,只输出正确的内容,过滤掉错误的信息.</li>
+</ul>
+</li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415125602811.png" alt="image-20220415125602811"></li>
+<li>看到一个重置root的文件,执行一下看看</li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415125937905.png" alt="image-20220415125937905"></li>
+<li>执行失败,将文件下载之后查看内容 <code>再启一个端口将文件传回</code></li>
+<li><code>nc -nvlp 8889 &gt; reset_root</code> 服务器端监听8889端口并将接受到的文件重命名为reset_root</li>
+<li><code>nv -nc 8889 &lt; /usr/bin/reset_root</code> 将客户端的文件传回服务器端</li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415130433781.png" alt="image-20220415130433781"></li>
+<li>在服务器端查看该文件 <code>使用strings</code> 来查看该二进制文件</li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415131622450.png" alt="image-20220415131622450"></li>
+<li>无法得出有效信息,尝试使用工具进行跟踪代码</li>
+<li><code>ltrace ./reset_root</code> 使用该命令之前需要将代码修改为可执行状态<code>chmox +x reset_root</code></li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415131909783.png" alt="image-20220415131909783"></li>
+<li>执行到此处后提示缺少文件,根据提示在客户端创建三个文件</li>
+<li>再次执行<code>/usr/bin/reset_root</code>文件</li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415132511034.png" alt="image-20220415132511034"></li>
+<li>根据提示运行成功,并将root密码成功重置为<code>Earth</code></li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415132949855.png" alt="image-20220415132949855"></li>
+<li>以已成功获取到root权限</li>
+<li><img src="https://raw.githubusercontent.com/christopher-x/images/main/image-20220415133120328.png" alt="image-20220415133120328"></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+        <hr class="fhr">
+        <div id="vcomments"></div>
+    
+</div>
+    <div class="footer" id="footer">
+    <p>Copyright © 2020 <a class="flink" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>-<a class="flink" target="_blank" rel="noopener" href="https://github.com/sanjinhub/hexo-theme-geek">Geek</a>.
+        <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
+            <input type="checkbox" name="switch" id="update_style">
+            <span class="el-switch-style"></span>
+        </label>
+<!--         <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script> -->
+    </p>
+</div>
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="CmCti21ooOOIzFOhEyFkFvR0-gzGzoHsz">
+<input type="hidden" id="valine_appKey" value="FqiyUqbg7McKN2eG0MCewupf">
+
+<script src="/libs/jquery.min.js"></script>
+
+
+<script src="/libs/highlight/highlight.pack.js"></script>
+
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
+
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
+
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
+
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
+
+.v a {
+    color: #8696b1;
+}
+
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
+</body>
+
+</html>
